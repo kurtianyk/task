@@ -18,8 +18,10 @@ class ContactPolicy
      */
      public function destroy(User $user, Contact $contact)
      {
-       return $user->id == $contact->user_id;
-
-
+       return $user->id === $contact->user_id;
+     }
+     public function update(User $user, Contact $contact)
+     {
+       return $user->id === $contact->user_id;
      }
 }

@@ -17,9 +17,32 @@
 
           <button type="submit">Додати контакт</button>
         </form>
-         @if (isset($message)) {
+         @if (isset($message))
           echo $message;
-        }
+
         @endif
   <!-- TODO: В кого дн найближчих 5 днів, 10 днів -->
+
+  @foreach ($b_day as $day)
+    <tr>
+      <!-- Ім'я людин -->
+      <td>
+
+        <div>{{ $day->name }}</div>
+      </td>
+      <td>
+        <div>{{ $day->surname }}</div>
+      </td>
+      <td>
+        <div>{{ $day->phone_number }}</div>
+      </td>
+      <td>
+        <div>{{ $day->birth_day }}</div>
+      </td>
+      <td>
+        <div>{{ $day->info }}</div>
+      </td>
+
+    </tr>
+  @endforeach
 @endsection

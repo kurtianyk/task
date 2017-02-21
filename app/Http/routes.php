@@ -20,17 +20,12 @@ Route::get('/', function () {
     }
 });
 
-Route::get('home', function (){
-  if(Auth::guest()){
-    return view('welcome');
-  }
-  else{
-    return view('home');
-  }
-});
+Route::get('home', 'ContactController@b_day'); 
 Route::get('/contacts', 'ContactController@index');
 Route::post('/contact', 'ContactController@store');
-Route::put('/contact/edit/{contact}', 'ContactController@update');
+Route::get('/contact/edit/{contact}', 'ContactController@edit');
+
+Route::post('/contact/edit/this/{contact}', 'ContactController@update');
 Route::delete('/contact/delete/{contact}', 'ContactController@destroy');
 
 

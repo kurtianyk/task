@@ -23,7 +23,7 @@
           <tbody>
             @foreach ($contacts as $contact)
               <tr>
-                <!-- Ім'я людини -->
+                <!-- Ім'я людин -->
                 <td>
 
                   <div>{{ $contact->name }}</div>
@@ -42,7 +42,7 @@
                 </td>
 
                 <td>
-                  <!-- TODO: Кнопка Редагувати -->
+                  <a href="/contact/edit/{{ $contact->id }}">Редагувати</a>
                 </td>
                 <td>
                   <form action="/contact/delete/{{ $contact->id }}" method="POST">

@@ -27,7 +27,7 @@ class RouteServiceProvider extends ServiceProvider
         //
 
 
-        $router->model('/contact/delete', 'App\Contact');
+       $router->model('contact', 'App\Contact');
         parent::boot($router);
     }
 
